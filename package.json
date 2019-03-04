@@ -1,19 +1,26 @@
 {
   "name": "ghosthugs-alaytic-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Analytics server for ghosthugs.me",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ghosthugs.me",
+    "ghosthugs",
+    "analytics"
+  ],
+  "author": "Vipul Bhardwaj (@vipulbhj)",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "2.8.5",
     "express": "^4.16.4",
-    "mongoose": "^5.4.12",
-    "nodemon": "1.18.10"
+    "mongoose": "^5.4.12"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }

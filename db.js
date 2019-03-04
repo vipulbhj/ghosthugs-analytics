@@ -1,3 +1,4 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/ghosthugs', {useNewUrlParser: true});
+const mongoPath = process.env.MONGODB_URI || 'mongodb://localhost:27017/ghosthugs';
+mongoose.connect(mongoPath, {useNewUrlParser: true});

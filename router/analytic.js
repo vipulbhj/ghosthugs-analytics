@@ -1,10 +1,21 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const router = express.Router();
 const AnalyticModel = require('../models/stats');
 
 router.get('/', (req, res) => {
-    res.json({message: 'Base URL'});
+    AnalyticModel.find({}, (err, data) => {
+        if(err) {
+            return res.json({
+                status: 'failed',
+                err
+            });
+        }
+        
+        return res.json({
+            status: 'success',
+            data
+        })
+    });
 });
 
 router.post('/', (req, res) => {
